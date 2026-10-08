@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Unity Editor",
+            "type": "unity",
+            "request": "attach"
+        },
+        {
+            "name": "Attach to Unity Player",
+            "type": "unity",
+            "request": "attach",
+            "transportArgs": {
+                "port": 56000
+            }
+        }
+    ]
+}
