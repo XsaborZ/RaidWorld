@@ -92,7 +92,7 @@ public class R1E1Manager : UdonSharpBehaviour
     private void SetDicts(int DaPos)
     {
         //int cCount = 0; //tester number -- currently only able to do set 1 and 2
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < 2; i++)
         {
             transform.GetChild(i).transform.GetComponent<UdonBehaviour>().SetProgramVariable("CCData", EnCodeList[currentSet].DataDictionary);
             //DaPos++;
@@ -114,9 +114,16 @@ public class R1E1Manager : UdonSharpBehaviour
     {
         if (iSetCompleted >= EnCodeList.Count)
         {
+            // Enable PadLock
+            // Send Set to PadLock
+            // DataList tempList = EnCodeList;
+            // transform.GetChild(2).transform.GetComponent<UdonBehaviour>().SetProgramVariable("LockList", tempList);
+
+            // comment out below when PadLock is implemented
             LvDifficulty++;
             EnInitiate();
             return;
+            //
         }
         iSidesPassed = 0;
         SetDicts(currentSet);
@@ -131,8 +138,8 @@ public class R1E1Manager : UdonSharpBehaviour
             iSidesPassed++;
             iSetCompleted++;
             bool isOddLv = ((LvDifficulty - 1) % 2) == 0;
-            //if (isOddLv)
-            //    Debug.Log("Current level is Odd: " + isOddLv);
+
+
             if (iSidesPassed == 2 || (isOddLv && (iSetCompleted == EnCodeList.Count))) // Set is only odd if on final - can only pass if both lv is odd and on final set
             {
                 iSidesPassed = 0;

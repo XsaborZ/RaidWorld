@@ -58,7 +58,8 @@ public class R1E1RingsManager : UdonSharpBehaviour
             if (Access)
             {
                 Selected = value;
-                RequestSerialization();
+                if (Selected == -1) return;
+                //RequestSerialization();
                 VerifySelected();
             }
             //Selected = -1;
@@ -81,8 +82,9 @@ public class R1E1RingsManager : UdonSharpBehaviour
             transform.parent.transform.parent.transform.GetComponent<UdonBehaviour>().SetProgramVariable("Pass", true);
         else
             transform.parent.transform.parent.transform.GetComponent<UdonBehaviour>().SetProgramVariable("Failed", true);
+        Selected = -1;
     }
-    public bool RowPassed
+    public bool RowPassed // is multiplayer dependant 
     {
         set
         {
@@ -103,15 +105,15 @@ public class R1E1RingsManager : UdonSharpBehaviour
             ResetMaterials();
             SetRingData();
         }
-        else
-        {
-            VerifySelected();
-            if (Networking.IsMaster)
-            {
-                Selected = -1;
-                RequestSerialization();
-            }
-        }
+        //else
+        //{
+        //    VerifySelected();
+        //    if (Networking.IsMaster)
+        //    {
+        //        Selected = -1;
+        //        RequestSerialization();
+        //    }
+        //}
     }
 
     public void ResetMaterials()
