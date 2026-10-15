@@ -18,6 +18,8 @@ public class R1E1RingsManager : UdonSharpBehaviour
 
     [UdonSynced] private int cRing;
     [UdonSynced] private int jRing;
+    [UdonSynced] private bool pass;
+    [UdonSynced] private bool playerEntered;
 
     void Start()
     {
@@ -38,6 +40,8 @@ public class R1E1RingsManager : UdonSharpBehaviour
             Debug.Log(transform.name + " Data Recieved");
             cRing = RingsData["icColumn"].Int + (3 * (RingsData["icRow"].Int - 1));
             jRing = RingsData["ijColumn"].Int + (3 * (RingsData["ijRow"].Int - 1));
+            playerEntered = false;
+            Access = false;
 
             RequestSerialization(); // any code after this line replicate in OnDeserialization
 
@@ -59,7 +63,6 @@ public class R1E1RingsManager : UdonSharpBehaviour
             {
                 Selected = value;
                 if (Selected == -1) return;
-                //RequestSerialization();
                 VerifySelected();
             }
             //Selected = -1;
@@ -70,30 +73,37 @@ public class R1E1RingsManager : UdonSharpBehaviour
     private void VerifySelected()
     {
         int _selected = Selected + 1;
-        bool pass = false;
+        pass = false;
         if (_selected == jRing)
             pass = true; // not getting hit
 
         Debug.Log(transform.name + ": Ring Selected: " + _selected + ":  Correct Ring: " +  jRing + ":  Pass: " + pass); 
        
-
+        playerEntered = true;
         // Serialization only needed if passed or failed
-        if (pass)
-            transform.parent.transform.parent.transform.GetComponent<UdonBehaviour>().SetProgramVariable("Pass", true);
-        else
-            transform.parent.transform.parent.transform.GetComponent<UdonBehaviour>().SetProgramVariable("Failed", true);
+        playerEnteredRing();
+        RequestSerialization();
         Selected = -1;
+
     }
     public bool RowPassed // is multiplayer dependant 
     {
         set
         {
             Access = value;
-            Networking.SetOwner(Networking.LocalPlayer, gameObject);
+            if (!Access) return;
             RequestSerialization();
             Debug.Log(transform.name + ": Enabling Rings: ");
         }
         get => Access;
+    }
+
+    private void playerEnteredRing()
+    {
+        if (pass)
+            transform.parent.transform.parent.transform.GetComponent<UdonBehaviour>().SetProgramVariable("Pass", true);
+        else
+            transform.parent.transform.parent.transform.GetComponent<UdonBehaviour>().SetProgramVariable("Failed", true);
     }
 
     public override void OnDeserialization()
@@ -105,6 +115,11 @@ public class R1E1RingsManager : UdonSharpBehaviour
             ResetMaterials();
             SetRingData();
         }
+        if(playerEntered)
+        {
+            playerEnteredRing();
+        }
+
         //else
         //{
         //    VerifySelected();

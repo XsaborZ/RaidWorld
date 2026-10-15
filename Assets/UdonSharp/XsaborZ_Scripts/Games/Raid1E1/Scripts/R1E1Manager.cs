@@ -133,6 +133,7 @@ public class R1E1Manager : UdonSharpBehaviour
     {
         set
         {
+            if (!Networking.IsMaster) return;
             Pass = value;
             Debug.Log("Side Passed");
             iSidesPassed++;
@@ -157,6 +158,7 @@ public class R1E1Manager : UdonSharpBehaviour
     {
         set
         {
+            if (!Networking.IsMaster) return;
             Failed = value;
             Debug.Log("Encounter Failed. Reseting Lv: " + LvDifficulty);
             EnInitiate(); // Reset

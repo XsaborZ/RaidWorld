@@ -11,9 +11,9 @@ public class R1E1PlateManager : UdonSharpBehaviour
     protected DataDictionary PlateData;
 
     [FieldChangeCallback(nameof(RowSelected))]
-    [UdonSynced] private int Selected = -1;
-    [UdonSynced] private bool SetVisuals;
+    private int Selected = -1;
 
+    [UdonSynced] private bool SetVisuals;
     [UdonSynced] private int NotcjRow;
     [UdonSynced] private int jRow; 
     
@@ -57,7 +57,8 @@ public class R1E1PlateManager : UdonSharpBehaviour
         set
         {
             Selected = value;
-            RequestSerialization(); 
+            if (Selected == -1) return; // general fix for needing to hit the same button twice in a row
+            //RequestSerialization(); 
             VerifySelected();
         }
         get => Selected;
@@ -84,9 +85,10 @@ public class R1E1PlateManager : UdonSharpBehaviour
             //if (!Networking.IsMaster) return;
             transform.parent.GetChild(1).transform.GetComponent<UdonBehaviour>().SetProgramVariable("Access", pass);
         }
+        Selected = -1;
     }
 
-    public override void OnDeserialization()
+    public override void OnDeserialization() // only needed for initial setup / material changes
     {
         Debug.Log("Plates Request Recieved: Selected: " + Selected);
         

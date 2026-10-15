@@ -86,7 +86,6 @@ public class R1E1LockManager : UdonSharpBehaviour
         {
             DataDictionary dict = LockList[i].DataDictionary;
             Log += "Code: " + (i + 1) + " Blessing: " + dict["bBlessing"].Boolean + " Column: " + dict["icColumn"].Int + " Row: " + dict["icRow"].Int + "\n";
-            //Log += "Jump: " + (i + 1) + " Blessing: " + dict["bBlessing"].Boolean + " Column: " + dict["ijColumn"].Int + " Row: " + dict["ijRow"].Int + "\n";
         }
         Debug.Log(Log);
     }
