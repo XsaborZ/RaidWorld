@@ -225,6 +225,12 @@
         "com.unity.postprocessing": "3.1.1"
       }
     },
+    "net.bluwizard.hierarchy": {
+      "version": "file:net.bluwizard.hierarchy",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

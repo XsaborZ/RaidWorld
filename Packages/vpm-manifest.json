@@ -9,11 +9,11 @@
     "com.vrchat.worlds": {
       "version": "3.10.5"
     },
-    "net.bluwizard.hierarchy": {
-      "version": "1.14.2"
-    },
     "dev.onevr.vrworldtoolkit": {
       "version": "3.5.0"
+    },
+    "net.bluwizard.hierarchy": {
+      "version": "1.14.2"
     }
   },
   "locked": {
@@ -31,12 +31,12 @@
         "com.vrchat.base": "3.10.5"
       }
     },
-    "net.bluwizard.hierarchy": {
-      "version": "1.14.2",
-      "dependencies": {}
-    },
     "dev.onevr.vrworldtoolkit": {
       "version": "3.5.0",
+      "dependencies": {}
+    },
+    "net.bluwizard.hierarchy": {
+      "version": "1.14.2",
       "dependencies": {}
     }
   }
