@@ -27,11 +27,11 @@ TagManager:
   - InternalUI
   - HardwareObjects
   - reserved4
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HitboxPlayer
+  - HitboxAI
+  - Damage
+  - DamageAI
+  - DamageZone
   - 
   - 
   - 
