@@ -72,10 +72,10 @@ public class R1E1RingsManager : UdonSharpBehaviour
 
         int _selected = Selected + 1;
         bool pass = false;
-        if (Selected == jRing)
-            pass = true;
+        if (_selected == jRing)
+            pass = true; // not getting hit
 
-        Debug.Log(transform.name + ": Ring Selected: " + _selected + ":  Pass: " + pass);
+        Debug.Log(transform.name + ": Ring Selected: " + _selected + ":  Correct Ring: " +  jRing + ":  Pass: " + pass); 
        
         if (pass)
             transform.parent.transform.parent.transform.GetComponent<UdonBehaviour>().SetProgramVariable("Pass", true);

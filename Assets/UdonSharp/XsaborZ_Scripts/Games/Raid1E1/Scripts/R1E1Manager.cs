@@ -131,6 +131,8 @@ public class R1E1Manager : UdonSharpBehaviour
             iSidesPassed++;
             iSetCompleted++;
             bool isOddLv = ((LvDifficulty - 1) % 2) == 0;
+            //if (isOddLv)
+            //    Debug.Log("Current level is Odd: " + isOddLv);
             if (iSidesPassed == 2 || (isOddLv && (iSetCompleted == EnCodeList.Count))) // Set is only odd if on final - can only pass if both lv is odd and on final set
             {
                 iSidesPassed = 0;
