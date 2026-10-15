@@ -69,8 +69,6 @@ public class R1E1RingsManager : UdonSharpBehaviour
 
     private void VerifySelected()
     {
-        if (!Networking.IsMaster) return;
-
         int _selected = Selected + 1;
         bool pass = false;
         if (_selected == jRing)
@@ -78,6 +76,8 @@ public class R1E1RingsManager : UdonSharpBehaviour
 
         Debug.Log(transform.name + ": Ring Selected: " + _selected + ":  Correct Ring: " +  jRing + ":  Pass: " + pass); 
        
+
+        // Serialization only needed if passed or failed
         if (pass)
             transform.parent.transform.parent.transform.GetComponent<UdonBehaviour>().SetProgramVariable("Pass", true);
         else
