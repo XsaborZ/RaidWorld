@@ -135,9 +135,10 @@ public class DamageSystem : UdonSharpBehaviour
     // -------------------------------------------------------------------------
     // Initialization
     // -------------------------------------------------------------------------
-    void Start()
+    public void Start()
     {
         _Initialize();
+        Debug.Log("Started");
     }
 
     private void _Initialize()
@@ -151,12 +152,16 @@ public class DamageSystem : UdonSharpBehaviour
         totalDamageTaken = 0f;
         totalHitsReceived = 0;
 
-        // Auto-resolve player reference if in player mode
+        // Auto-resolve player reference if in player mode (VRC Player Object support)
         if (isPlayer)
         {
             if (targetPlayer == null || !targetPlayer.IsValid())
             {
-                targetPlayer = Networking.LocalPlayer;
+                targetPlayer = Networking.GetOwner(gameObject);
+                if (targetPlayer == null || !targetPlayer.IsValid())
+                {
+                    targetPlayer = Networking.LocalPlayer;
+                }
             }
         }
 
@@ -244,7 +249,7 @@ public class DamageSystem : UdonSharpBehaviour
     // -------------------------------------------------------------------------
     // Per-Frame Tracking & Fallback Variable Polling
     // -------------------------------------------------------------------------
-    void Update()
+    public void Update()
     {
         // Polling safeguard: if another script set incoming damage via SetProgramVariable
         // but forgot to call SendCustomEvent("_TakeDamage"), process it automatically.
@@ -694,6 +699,15 @@ public class DamageSystem : UdonSharpBehaviour
         if (isPlayer && player != null && player.isLocal)
         {
             _ResetHealth();
+        }
+    }
+
+    public override void OnOwnershipTransferred(VRCPlayerApi player)
+    {
+        if (isPlayer && player != null && player.IsValid())
+        {
+            targetPlayer = player;
+            if (enableLogging) Debug.Log($"{logPrefix} Player Object ownership set to '{player.displayName}', updating bone tracking.");
         }
     }
 

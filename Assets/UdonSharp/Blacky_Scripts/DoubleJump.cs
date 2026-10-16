@@ -47,11 +47,11 @@ namespace Blacky.Movement.DoubleJump
 
             _resetJump();
 
-            //TODO: Remove after Development
-            JumpSlider.value = jumpImpulse;
-            DoubleJumpSlider.value = DoublejumpVelocityY;
-            JumpAmmount.text = JumpSlider.value.ToString();
-            DoubleAmmount.text = DoubleJumpSlider.value.ToString();
+            // //TODO: Remove after Development
+            // JumpSlider.value = jumpImpulse;
+            // DoubleJumpSlider.value = DoublejumpVelocityY;
+            // JumpAmmount.text = JumpSlider.value.ToString();
+            // DoubleAmmount.text = DoubleJumpSlider.value.ToString();
         }
 
         public override void InputMoveHorizontal(float axisPosition, UdonInputEventArgs args)

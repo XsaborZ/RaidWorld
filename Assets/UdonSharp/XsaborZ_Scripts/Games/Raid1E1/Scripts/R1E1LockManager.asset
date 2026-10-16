@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: R1E1LockManager
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: d628023a412378e4599c69112a250538,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 7980b6b2ca5554d43bbc9a6b4e672732,
     type: 2}
   udonAssembly: 
   assemblyError: 

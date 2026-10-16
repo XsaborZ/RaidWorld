@@ -50,6 +50,9 @@ output_log.txt
 output_log_*.txt
 VRChat_*.log
 
+# ClientSimStorage
+/ClientSimStorage/
+
 # ------------------------------------------------------------------------------
 # VRChat Creator Companion / VPM (VRChat Package Manager)
 # ------------------------------------------------------------------------------

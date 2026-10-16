@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - reserved3
+  - Item
   - Water
   - UI
   - reserved6
@@ -32,7 +32,7 @@ TagManager:
   - Damage
   - DamageAI
   - DamageZone
-  - 
+  - reserved3
   - 
   - 
   - 
