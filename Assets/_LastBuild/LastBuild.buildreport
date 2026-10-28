@@ -1,0 +1,596 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1126 &-6051707242084939351
+PackedAssets:
+  m_ShortPath: CAB-a955a65b0301e77ed2eed8fd44981654
+  m_Overhead: 4032
+  m_Contents:
+  - fileID: 1
+    classID: 142
+    packedSize: 104
+    offset: 4032
+    sourceAssetGUID: 00000000000000000000000000000000
+    buildTimeAssetPath: AssetBundle Object
+  - fileID: 2
+    classID: 290
+    packedSize: 152
+    offset: 4136
+    sourceAssetGUID: 00000000000000000000000000000000
+    buildTimeAssetPath: 'Built-in AssetBundleManifest: AssetBundleManifest'
+--- !u!1521398425 &-5598630914952866140
+VideoBuildInfo:
+  m_VideoClipCount: 0
+  m_IsVideoModuleDisabled: 0
+--- !u!382020655 &-4660685247806153255
+PluginBuildInfo:
+  m_RuntimePlugins:
+  - VRC.Udon.VM
+  - VRC.SDK3.Dynamics.PhysBone
+  - VRC.Udon.Security
+  - libvrc_fast_crypto
+  - VRCEconomy
+  - DOTween
+  - YamlDotNet
+  - VRCSDK3
+  - nunit.framework
+  - VRC.Primitives
+  - VRCCore-Editor
+  - Serilog.Sinks.File
+  - vrc_fast_crypto
+  - VRC.SDK3.Dynamics.Contact
+  - System.Collections.Immutable
+  - OculusXRPlugin
+  - VRC.Udon.Wrapper
+  - VRC.ImageProcessing
+  - Unity.Burst.Unsafe
+  - SemanticVersioning
+  - vrc_image_loader
+  - librsync.net
+  - VRC.Core.Isolated
+  - OVRPlugin
+  - System.Runtime.CompilerServices.Unsafe
+  - Newtonsoft.Json
+  - Unity.Collections.LowLevel.ILSupport
+  - VRC.Udon.Common
+  - VRC.Udon.VRCWrapperModules
+  - VRC.Dynamics
+  - VRCSDKBase
+  - VRC.Utility
+  - portmidi
+  - VRC.Udon.ClientBindings
+  - SDKBase-Legacy
+  - Blake2Sharp
+  - VRC.SDK3.Dynamics.Constraint
+  - System.Text.Encoding.CodePages
+  - VRC.Billboard
+  - Serilog
+  - Collections.Pooled
+  - VRC.Primitives.UniTask
+  - AudioPluginOculusSpatializer
+  m_EditorPlugins:
+  - libvrc_image_loader
+  - VRC.Udon.VRCGraphModules
+  - VRC.Udon.EditorBindings
+  - 0Harmony
+  - VRC.SDK3.Dynamics.Contact.Editor
+  - libvrc_shader_compiler_plugin
+  - Mono.Cecil.Pdb
+  - JetBrains.Rider.PathLocator
+  - vrc_shader_compiler_plugin
+  - VRCSDKBase-Editor
+  - Microsoft.CodeAnalysis.CSharp
+  - VRC.Udon.VRCTypeResolverModules
+  - VRCEconomy-Editor
+  - ICSharpCode.SharpZipLib
+  - VRC.SDK3.Dynamics.Constraint.Editor
+  - AppleEventIntegration
+  - Mono.Cecil
+  - VRC.Udon.Graph
+  - Unity.Burst.Cecil.Pdb
+  - Mono.Cecil.Rocks
+  - Microsoft.CodeAnalysis
+  - VRC.Udon.Compiler
+  - System.Reflection.Metadata
+  - VRCSDK3-Editor
+  - Mono.Cecil.Mdb
+  - Serilog.Sinks.Unity3D
+  - Algolia.Search
+  - DOTweenEditor
+  - Unity.Burst.Cecil.Mdb
+  - VRC.SDK3.Dynamics.PhysBone.Editor
+  - Unity.Burst.Cecil
+  - Unity.Burst.Cecil.Rocks
+  - vpm-core-lib
+  - VRC.Udon.UAssembly
+--- !u!641289076 &-1522657212494559635
+AudioBuildInfo:
+  m_IsAudioDisabled: 0
+  m_AudioClipCount: 0
+  m_AudioMixerCount: 0
+--- !u!1126 &-1373364575486194409
+PackedAssets:
+  m_ShortPath: BuildPlayer-CombatTestScene.sharedAssets
+  m_Overhead: 90275
+  m_Contents:
+  - fileID: 1
+    classID: 150
+    packedSize: 61
+    offset: 90904
+    sourceAssetGUID: 00000000000000000000000000000000
+    buildTimeAssetPath: 
+  - fileID: 2
+    classID: 142
+    packedSize: 204
+    offset: 90968
+    sourceAssetGUID: 00000000000000000000000000000000
+    buildTimeAssetPath: 
+  - fileID: 3
+    classID: 21
+    packedSize: 1080
+    offset: 91176
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 4
+    classID: 21
+    packedSize: 268
+    offset: 92256
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 5
+    classID: 21
+    packedSize: 912
+    offset: 92528
+    sourceAssetGUID: aa1914dda7c078345ba91d5c6bde696d
+    buildTimeAssetPath: Assets/Scenes/BlackyTestingScene/GridFloor_udon.mat
+  - fileID: 6
+    classID: 21
+    packedSize: 956
+    offset: 93440
+    sourceAssetGUID: fba254a7c112f6b5c84689fa781034b5
+    buildTimeAssetPath: Assets/Scenes/BlackyTestingScene/SampleAssets_matte.mat
+  - fileID: 7
+    classID: 21
+    packedSize: 1156
+    offset: 94400
+    sourceAssetGUID: e9a2e259e6f5a5743816abf66a7d5ef9
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Resources/ClientSim/Avatars/VRC_Utility_FullBody/Materials/Avatar_Utility_Base_MAT.mat
+  - fileID: 8
+    classID: 21
+    packedSize: 1156
+    offset: 95560
+    sourceAssetGUID: 98b4c9a9be35dca4d8c5e65a03ab2706
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Resources/ClientSim/Avatars/VRC_Utility_FullBody/Materials/Avatar_Utility_Body_MAT.mat
+  - fileID: 9
+    classID: 28
+    packedSize: 349712
+    offset: 96720
+    sourceAssetGUID: 0ec90c6e3b7802f4793df205483e45ef
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Resources/ClientSim/Avatars/VRC_Utility_FullBody/Textures/Avatar_Utility_Body_MAT_MetallicSmoothness.png
+  - fileID: 10
+    classID: 28
+    packedSize: 174936
+    offset: 446432
+    sourceAssetGUID: 1994f4fc451e42149869677281421a08
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Resources/ClientSim/Avatars/VRC_Utility_FullBody/Textures/Avatar_Utility_Base_MAT_AlbedoTransparency.png
+  - fileID: 11
+    classID: 28
+    packedSize: 1398288
+    offset: 621368
+    sourceAssetGUID: 5e8deba536a4ef85287a22d518d469a8
+    buildTimeAssetPath: Assets/Scenes/BlackyTestingScene/SampleAssetsSet_V1_phong1_MetallicSmoothness.png
+  - fileID: 12
+    classID: 28
+    packedSize: 699196
+    offset: 2019656
+    sourceAssetGUID: 6c5d3462f3e244c82829614c44534dcf
+    buildTimeAssetPath: Assets/Scenes/BlackyTestingScene/GridFloor_udon.png
+  - fileID: 13
+    classID: 28
+    packedSize: 349700
+    offset: 2718856
+    sourceAssetGUID: 80ffcbd97b3b102428eaa5283713fea7
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Resources/ClientSim/Avatars/VRC_Utility_FullBody/Textures/Avatar_Utility_Body_MAT_Normal.png
+  - fileID: 14
+    classID: 28
+    packedSize: 2796376
+    offset: 3068560
+    sourceAssetGUID: 8ce86cc0a0b8a16d187336c15aaa6326
+    buildTimeAssetPath: Assets/Scenes/BlackyTestingScene/SampleAssetsSet_V1_phong1_AlbedoTransparency.png
+  - fileID: 15
+    classID: 28
+    packedSize: 349700
+    offset: 5864936
+    sourceAssetGUID: 92ce7c78a3437064d9b781dd692a70e5
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Resources/ClientSim/Avatars/VRC_Utility_FullBody/Textures/Avatar_Utility_Base_MAT_Normal.png
+  - fileID: 16
+    classID: 28
+    packedSize: 349712
+    offset: 6214640
+    sourceAssetGUID: afdf886ec0372bf43835e45764514cee
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Resources/ClientSim/Avatars/VRC_Utility_FullBody/Textures/Avatar_Utility_Base_MAT_MetallicSmoothness.png
+  - fileID: 17
+    classID: 28
+    packedSize: 174936
+    offset: 6564352
+    sourceAssetGUID: d0741124752ca474e89ba2d586484bf2
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Integrations/ClientSim/Runtime/Resources/ClientSim/Avatars/VRC_Utility_FullBody/Textures/Avatar_Utility_Body_MAT_AlbedoTransparency.png
+  - fileID: 18
+    classID: 28
+    packedSize: 1398276
+    offset: 6739288
+    sourceAssetGUID: fee370686aeed21f1b6c1e8824b2e026
+    buildTimeAssetPath: Assets/Scenes/BlackyTestingScene/SampleAssetsSet_V1_phong1_Normal.png
+  - fileID: 19
+    classID: 48
+    packedSize: 17324
+    offset: 8137568
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 20
+    classID: 48
+    packedSize: 25420
+    offset: 8154896
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 21
+    classID: 48
+    packedSize: 116276
+    offset: 8180320
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 22
+    classID: 48
+    packedSize: 10256
+    offset: 8296600
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 23
+    classID: 48
+    packedSize: 7020
+    offset: 8306856
+    sourceAssetGUID: 0000000000000000f000000000000000
+    buildTimeAssetPath: Resources/unity_builtin_extra
+  - fileID: 24
+    classID: 48
+    packedSize: 16596
+    offset: 8313880
+    sourceAssetGUID: 0b7113dea2069fc4e8943843eff19f70
+    buildTimeAssetPath: Packages/com.vrchat.base/Runtime/VRCSDK/Sample Assets/Shaders/Mobile/VRChat-Mobile-StandardLite.shader
+  - fileID: 25
+    classID: 48
+    packedSize: 8380
+    offset: 8330480
+    sourceAssetGUID: 2dcd9e0568e0a6f45b92c60ba2eb16a0
+    buildTimeAssetPath: Packages/com.vrchat.base/Runtime/VRCSDK/Sample Assets/Shaders/Mobile/VRChat-Mobile-Diffuse.shader
+  - fileID: 26
+    classID: 115
+    packedSize: 96
+    offset: 90160
+    sourceAssetGUID: 4ecd63eff847044b68db9453ce219299
+    buildTimeAssetPath: Packages/com.vrchat.base/Runtime/VRCSDK/Plugins/VRCCore-Editor.dll
+  - fileID: 27
+    classID: 115
+    packedSize: 116
+    offset: 90256
+    sourceAssetGUID: 661092b4961be7145bfbe56e1e62337b
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/VRCSDK/Plugins/VRCSDK3.dll
+  - fileID: 28
+    classID: 115
+    packedSize: 108
+    offset: 90376
+    sourceAssetGUID: 661092b4961be7145bfbe56e1e62337b
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/VRCSDK/Plugins/VRCSDK3.dll
+  - fileID: 29
+    classID: 115
+    packedSize: 84
+    offset: 90488
+    sourceAssetGUID: 45115577ef41a5b4ca741ed302693907
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/Udon/UdonBehaviour.cs
+  - fileID: 30
+    classID: 115
+    packedSize: 124
+    offset: 90576
+    sourceAssetGUID: bf61d954ecb803046953c666facfb904
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/Udon/ProgramSources/SerializedUdonProgramAsset.cs
+  - fileID: 31
+    classID: 115
+    packedSize: 100
+    offset: 90704
+    sourceAssetGUID: 661092b4961be7145bfbe56e1e62337b
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/VRCSDK/Plugins/VRCSDK3.dll
+  - fileID: 32
+    classID: 115
+    packedSize: 92
+    offset: 90808
+    sourceAssetGUID: 661092b4961be7145bfbe56e1e62337b
+    buildTimeAssetPath: Packages/com.vrchat.worlds/Runtime/VRCSDK/Plugins/VRCSDK3.dll
+  - fileID: 33
+    classID: 114
+    packedSize: 6736
+    offset: 8338864
+    sourceAssetGUID: 6714872e355da0e7fa9eca5059f298b5
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/07d78f2e64b78af5aabd2e261e2e0c47.asset
+  - fileID: 34
+    classID: 114
+    packedSize: 1772
+    offset: 8345600
+    sourceAssetGUID: 67cfccb38d3407b44b86036494e83635
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/17830d157f00b09408e9c38c2091a851.asset
+  - fileID: 35
+    classID: 114
+    packedSize: 12916
+    offset: 8347376
+    sourceAssetGUID: 6eb8a8b9438b222dc99c7b95460a4f22
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/233e90c8d73de31cc86032fba1817e54.asset
+  - fileID: 36
+    classID: 114
+    packedSize: 2844
+    offset: 8360296
+    sourceAssetGUID: cbf869c47a0ea2648b8fadb7fbb4a75a
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/566cc00e27d5822449529a3785eae366.asset
+  - fileID: 37
+    classID: 114
+    packedSize: 24544
+    offset: 8363144
+    sourceAssetGUID: d184ae6d9e6939fd685d3e98d5db8e5f
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/98c7377003c707831a2c23a85beb9b18.asset
+  - fileID: 38
+    classID: 114
+    packedSize: 20040
+    offset: 8387688
+    sourceAssetGUID: dbc8a13b0f8a17747ac4cf87ad6dff61
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/a5adcc7f315ec353dbdacb2d6f607634.asset
+  - fileID: 39
+    classID: 114
+    packedSize: 4872
+    offset: 8407728
+    sourceAssetGUID: 259546a32986097fd9784b9c9a9923f4
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/ad792ad80c7a2aedb86d11150a397ee5.asset
+  - fileID: 40
+    classID: 114
+    packedSize: 9404
+    offset: 8412600
+    sourceAssetGUID: 70ccb2bcca7d0649b8272e366be28ad5
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/bf1a74c79ad48da30916484e8440a073.asset
+  - fileID: 41
+    classID: 114
+    packedSize: 2636
+    offset: 8422008
+    sourceAssetGUID: 74b35943cd2622a569a2c51475b2f614
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/c70a1d4d55d0565bb9df467fdc60fbaa.asset
+  - fileID: 42
+    classID: 114
+    packedSize: 1692
+    offset: 8424648
+    sourceAssetGUID: efa650a840a90b44992a93f90152a350
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/c8df303ceb45ae84f85a11591f741734.asset
+  - fileID: 43
+    classID: 114
+    packedSize: 8532
+    offset: 8426344
+    sourceAssetGUID: be0fcb613c8076617b523aadc19f86cc
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/e2cd3edac00fec459b1b347f1c103887.asset
+  - fileID: 44
+    classID: 114
+    packedSize: 5780
+    offset: 8434880
+    sourceAssetGUID: 5f72e1a12a2e391339158c6b61977707
+    buildTimeAssetPath: Assets/SerializedUdonPrograms/eb407a4bf84f6133ebb85068a6082919.asset
+--- !u!1125 &1
+BuildReport:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Build AssetBundles
+  m_Summary:
+    buildStartTime:
+      serializedVersion: 2
+      ticks: 639286625973526420
+    buildGUID: 00000000000000000000000000000000
+    platformName: Win64
+    platformGroupName: Standalone
+    subtarget: 0
+    options: 0
+    assetBundleOptions: 32
+    outputPath: /tmp/DefaultCompany/RaidWorld
+    crc: 348732340
+    totalSize: 1376004
+    totalTimeTicks: 136223772
+    totalErrors: 0
+    totalWarnings: 3
+    buildType: 2
+    buildResult: 1
+  m_Files:
+  - path: /media/ssd/Sync/VR Projects/RaidWorld/scene-standalonewindows64-combattestscene-edc1b6d4-21bb-432f-aecb-2891b2bd0f2d.vrcw/BuildPlayer-CombatTestScene
+    role: Scene
+    id: 0
+    totalSize: 681152
+  - path: /media/ssd/Sync/VR Projects/RaidWorld/scene-standalonewindows64-combattestscene-edc1b6d4-21bb-432f-aecb-2891b2bd0f2d.vrcw/BuildPlayer-CombatTestScene.sharedAssets
+    role: SharedAssets
+    id: 1
+    totalSize: 8440660
+  - path: /media/ssd/Sync/VR Projects/RaidWorld/scene-standalonewindows64-combattestscene-edc1b6d4-21bb-432f-aecb-2891b2bd0f2d.vrcw
+    role: AssetBundle
+    id: 2
+    totalSize: 1372855
+  - path: /media/ssd/Sync/VR Projects/RaidWorld/scene-standalonewindows64-combattestscene-edc1b6d4-21bb-432f-aecb-2891b2bd0f2d.vrcw.manifest
+    role: AssetBundleTextManifest
+    id: 3
+    totalSize: 1849
+  - path: /media/ssd/Sync/VR Projects/RaidWorld/RaidWorld/CAB-a955a65b0301e77ed2eed8fd44981654
+    role: ResourcesFile
+    id: 4
+    totalSize: 4288
+  - path: /media/ssd/Sync/VR Projects/RaidWorld/RaidWorld
+    role: ManifestAssetBundle
+    id: 5
+    totalSize: 1089
+  - path: /media/ssd/Sync/VR Projects/RaidWorld/RaidWorld.manifest
+    role: AssetBundleTextManifest
+    id: 6
+    totalSize: 211
+  m_BuildSteps:
+  - stepName: Build Asset Bundles
+    durationTicks: 136223772
+    depth: 0
+    messages: []
+  - stepName: Calculate asset bundles to be built
+    durationTicks: 106674
+    depth: 1
+    messages: []
+  - stepName: Prebuild Cleanup and Recompile
+    durationTicks: 51072837
+    depth: 1
+    messages: []
+  - stepName: Compile scripts
+    durationTicks: 50460182
+    depth: 2
+    messages: []
+  - stepName: Generate and validate platform script types
+    durationTicks: 290962
+    depth: 2
+    messages: []
+  - stepName: Build Scene AssetBundle(s)
+    durationTicks: 58802338
+    depth: 1
+    messages:
+    - type: 2
+      content: Something tried to change Packages/com.vrchat.base/Editor/VRCSDK/Dependencies/VRChat/Resources/ThumbnailCapture.renderTexture,
+        which is part of a VRC Package, and will not be changed. Use "Save As..."
+        instead if you want to make your own version.
+    - type: 2
+      content: Something tried to change Packages/com.vrchat.base/Editor/XR/XRGeneralSettings.asset,
+        which is part of a VRC Package, and will not be changed. Use "Save As..."
+        instead if you want to make your own version.
+    - type: 2
+      content: Something tried to change Packages/com.vrchat.worlds/Samples/VRCQualitySettings/Scripts/WorldQualitySettings.asset,
+        which is part of a VRC Package, and will not be changed. Use "Save As..."
+        instead if you want to make your own version.
+  - stepName: 'Build bundle: scene-standalonewindows64-combattestscene-edc1b6d4-21bb-432f-aecb-2891b2bd0f2d.vrcw'
+    durationTicks: 57191771
+    depth: 2
+    messages: []
+  - stepName: Verify Build setup
+    durationTicks: 211788
+    depth: 3
+    messages: []
+  - stepName: Prepare assets for target platform
+    durationTicks: 981970
+    depth: 3
+    messages: []
+  - stepName: Prepare splash screen
+    durationTicks: 198238
+    depth: 3
+    messages:
+    - type: 3
+      content: Including Unity Splash Screen logo because 'Show Unity Logo' is enabled.
+  - stepName: Building scenes
+    durationTicks: 30081405
+    depth: 3
+    messages: []
+  - stepName: Building scene Assets/Scenes/CombatTestScene.unity
+    durationTicks: 30080921
+    depth: 4
+    messages:
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '0579e2f7d1c57a241a07d45f6088960b'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '3f7757f3a3e464644acd66ab61321b36'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '5893300e3f688004b9251878e312d460'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '0f3632a4c15254e4185e597a9b553015'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '2a34c3726f5aaca4c9b05004c07eb5c6'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '4bfd9d9a0b7684c449d31b38065b43f4'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '98cd88d0adb2e994a9e93d2efefa9eb4'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset 'aacda992b3a1dca4ea17ecbadc5cadf1'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '0e78d0c5c758aaf4f9d0ace911a2c5d8'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '1099cbb6e22bfe74a93b71dfe7c428aa'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '46df060d25eb3bc42be5fcfae616147c'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset 'd5d0346a3148a584da4572e44316e658'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset 'aaaeaa7ebc8e35a4e9ad1275785b2636'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '73571ae951ee35b479181d7ee4a4be25'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset 'e1b45160fe9957145826cfa2a86419a1'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset 'c69b708d523a01b449b6ca21384d958c'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset 'f6978e5f7a08f4047b4b9cf219efba6b'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '2de31a7dfc5718c47aa82772c351b8a3'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '8803f6df285e2fd48bbd0aeeb81ed533'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset '19c6455fcf036f447a988be402108b3c'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset 'b2329c06350f6d24ea49bc2842c81e99'
+        to compressed format
+    - type: 3
+      content: Converting SerializedUdonProgramAsset 'db6380e7c98d9e94bb856b1e1b1cf56c'
+        to compressed format
+    - type: 3
+      content: Computed code signatures for 50 scripts of type SerializedUdonProgramAsset
+        in 8ms
+  - stepName: Writing asset files
+    durationTicks: 13797476
+    depth: 3
+    messages: []
+  - stepName: Packaging assets - archive:/BuildPlayer-CombatTestScene/BuildPlayer-CombatTestScene.sharedAssets
+    durationTicks: 13766868
+    depth: 4
+    messages: []
+  - stepName: Creating compressed player package
+    durationTicks: 7275151
+    depth: 3
+    messages: []
+  - stepName: Postprocess built player
+    durationTicks: 59765
+    depth: 3
+    messages: []
+  m_Appendices:
+  - {fileID: 3131646359480637958}
+  - {fileID: -1373364575486194409}
+  - {fileID: -4660685247806153255}
+  - {fileID: -1522657212494559635}
+  - {fileID: -5598630914952866140}
+  - {fileID: -6051707242084939351}
+--- !u!668709126 &3131646359480637958
+BuiltAssetBundleInfoSet:
+  bundleInfos:
+  - bundleName: scene-standalonewindows64-combattestscene-edc1b6d4-21bb-432f-aecb-2891b2bd0f2d.vrcw
+    bundleArchiveFile: 2
+    packagedFileIndices: 0000000001000000
+  - bundleName: RaidWorld
+    bundleArchiveFile: 5
+    packagedFileIndices: 04000000

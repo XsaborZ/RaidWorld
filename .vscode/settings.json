@@ -1,7 +1,7 @@
 {
     "dotnet.defaultSolution": "RaidWorld.sln",
     "dotnet.dotnetPath": "/usr/bin/dotnet",
-    "dotrush.roslyn.dotnetSdkDirectory": "/usr/share/dotnet/sdk/10.0.112",
+    "dotrush.roslyn.dotnetSdkDirectory": "/usr/share/dotnet/sdk/10.0.113",
     "dotrush.msbuildProperties": {
         "DefineConstants": "UNITY_EDITOR"
     },

@@ -20,6 +20,12 @@ public class DamageSystem : UdonSharpBehaviour
     [Tooltip("Custom display name for AI / NPC (used in console logs). Defaults to GameObject name if left empty.")]
     public string aiName = "";
 
+    [Tooltip("Team ID for this entity (0 = FFA / Neutral, 1 = Team Alpha, 2 = Team Bravo, etc.).")]
+    public int teamId = 0;
+
+    [Tooltip("If true, damage from entities with the exact same teamId will still be applied. If false, friendly fire is prevented.")]
+    public bool allowFriendlyFire = false;
+
     [Header("--- Health & Shields ---")]
     [Tooltip("Maximum health capacity.")]
     public float maxHealth = 100f;
@@ -82,6 +88,9 @@ public class DamageSystem : UdonSharpBehaviour
     [Tooltip("For AI: deactivate this GameObject when health reaches 0.")]
     public bool deactivateOnDeath = false;
 
+    [Tooltip("For AI / NPC: delay in seconds before automatically respawning after death (0 or negative = no auto-respawn).")]
+    public float aiRespawnDelay = 0f;
+
     [Tooltip("Optional visual effect GameObject to activate upon death (e.g., explosion, ragdoll).")]
     public GameObject deathEffect;
 
@@ -115,6 +124,7 @@ public class DamageSystem : UdonSharpBehaviour
     [HideInInspector, System.NonSerialized] public float healAmount;
     [HideInInspector, System.NonSerialized] public VRCPlayerApi attackerPlayer;
     [HideInInspector, System.NonSerialized] public string attackerName = "";
+    [HideInInspector, System.NonSerialized] public int attackerTeamId = 0;
     [HideInInspector, System.NonSerialized] public VRCPlayerApi targetPlayer;
 
     // =========================================================================
@@ -274,7 +284,8 @@ public class DamageSystem : UdonSharpBehaviour
 
     private void _UpdatePlayerBoneHitboxes()
     {
-        VRCPlayerApi player = targetPlayer != null && targetPlayer.IsValid() ? targetPlayer : Networking.LocalPlayer;
+        VRCPlayerApi player = targetPlayer != null && targetPlayer.IsValid() ? targetPlayer : Networking.GetOwner(gameObject);
+        if (player == null || !player.IsValid()) player = Networking.LocalPlayer;
         if (player == null || !player.IsValid()) return;
 
         // Head tracking
@@ -372,32 +383,37 @@ public class DamageSystem : UdonSharpBehaviour
             return;
         }
 
+        // Friendly fire check: if teamId is not neutral (0) and attacker matches teamId, negate damage unless friendly fire is allowed
+        if (!allowFriendlyFire && teamId != 0 && attackerTeamId != 0 && attackerTeamId == teamId)
+        {
+            if (enableLogging) Debug.Log($"{logPrefix} Friendly fire prevented on '{_GetEntityName()}' (Team {teamId}).");
+            attackerTeamId = 0;
+            return;
+        }
+        attackerTeamId = 0;
+
         // 2. Determine hitbox hit location & multiplier
-        float multiplier = damageMultiplier > 0f ? damageMultiplier : 1.0f;
+        float multiplier = 1.0f;
         string locationName = "Body";
 
-        if (hitCollider != null)
+        bool hitIsHead = isHeadshot || (!string.IsNullOrEmpty(hitPart) && hitPart.ToLower() == "head") || (hitCollider != null && headCollider != null && hitCollider == headCollider);
+        bool hitIsChest = isChest || (!string.IsNullOrEmpty(hitPart) && hitPart.ToLower() == "chest") || (hitCollider != null && chestCollider != null && hitCollider == chestCollider);
+
+        if (hitIsHead)
         {
-            if (headCollider != null && hitCollider == headCollider)
-            {
-                multiplier *= headshotMultiplier;
-                locationName = "Head (Hitbox Collider)";
-            }
-            else if (chestCollider != null && hitCollider == chestCollider)
-            {
-                multiplier *= chestMultiplier;
-                locationName = "Chest (Hitbox Collider)";
-            }
-        }
-        else if (isHeadshot || (!string.IsNullOrEmpty(hitPart) && hitPart.ToLower() == "head"))
-        {
-            multiplier *= headshotMultiplier;
             locationName = "Head";
+            // If CombatHitbox or caller already applied a custom multiplier, preserve it instead of compounding
+            multiplier = (damageMultiplier > 0f && Mathf.Abs(damageMultiplier - 1.0f) > 0.001f) ? damageMultiplier : headshotMultiplier;
         }
-        else if (isChest || (!string.IsNullOrEmpty(hitPart) && hitPart.ToLower() == "chest"))
+        else if (hitIsChest)
         {
-            multiplier *= chestMultiplier;
             locationName = "Chest";
+            multiplier = (damageMultiplier > 0f && Mathf.Abs(damageMultiplier - 1.0f) > 0.001f) ? damageMultiplier : chestMultiplier;
+        }
+        else
+        {
+            multiplier = damageMultiplier > 0f ? damageMultiplier : 1.0f;
+            if (!string.IsNullOrEmpty(hitPart)) locationName = hitPart;
         }
 
         // Reset per-hit variable flags
@@ -601,6 +617,12 @@ public class DamageSystem : UdonSharpBehaviour
         {
             if (enableLogging) Debug.Log($"{logPrefix} Deactivating AI GameObject '{gameObject.name}'.");
             gameObject.SetActive(false);
+        }
+
+        if (aiRespawnDelay > 0f)
+        {
+            if (enableLogging) Debug.Log($"{logPrefix} Scheduling AI respawn in {aiRespawnDelay:F1} seconds...");
+            SendCustomEventDelayedSeconds(nameof(_ResetHealth), aiRespawnDelay);
         }
     }
 
